@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Run Get Frontend Config (file)
         id: frontend_file
-        uses: jdfalk/get-frontend-config-action@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: jdfalk/get-frontend-config-action@5b7006e85528ec7a818f4b2ea8d0bdca20f083fc # main
         with:
           repository-config: |
             languages:
@@ -30,7 +30,7 @@ jobs:
                 frontend: "web"
       - name: Run Get Frontend Config (inline)
         id: frontend_inline
-        uses: jdfalk/get-frontend-config-action@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: jdfalk/get-frontend-config-action@5b7006e85528ec7a818f4b2ea8d0bdca20f083fc # main
         with:
           repository-config: |
             languages:
