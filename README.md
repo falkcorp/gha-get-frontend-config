@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: jdfalk/get-frontend-config-action@v1
+      - uses: falkcorp/gha-get-frontend-config@v1
         id: frontend
 
       - name: Show frontend config
@@ -35,7 +35,7 @@ jobs:
 ### Provide YAML Content Directly
 
 ```yaml
-- uses: jdfalk/get-frontend-config-action@v1
+- uses: falkcorp/gha-get-frontend-config@v1
   id: frontend
   with:
     repository-config: |
@@ -49,21 +49,21 @@ jobs:
 ### Force Docker Execution
 
 ```yaml
-- uses: jdfalk/get-frontend-config-action@v1
+- uses: falkcorp/gha-get-frontend-config@v1
   id: frontend
   with:
     use-docker: true
-    docker-image: ghcr.io/jdfalk/get-frontend-config-action:main
+    docker-image: ghcr.io/falkcorp/gha-get-frontend-config:main
 ```
 
 ## Inputs
 
-| Input               | Description                                                          | Required | Default                                          |
-| ------------------- | -------------------------------------------------------------------- | -------- | ------------------------------------------------ |
-| `repository-config` | Repository configuration YAML content                                | Yes      | (none)                                           |
-| `config-file`       | Path to repository-config.yml file (alternative to repository input) | No       | `.github/repository-config.yml`                  |
-| `use-docker`        | Run the action inside the published container image                  | No       | `false`                                          |
-| `docker-image`      | Docker image reference (tag or digest) when `use-docker` is true     | No       | `ghcr.io/jdfalk/get-frontend-config-action:main` |
+| Input               | Description                                                          | Required | Default                                         |
+| ------------------- | -------------------------------------------------------------------- | -------- | ----------------------------------------------- |
+| `repository-config` | Repository configuration YAML content                                | Yes      | (none)                                          |
+| `config-file`       | Path to repository-config.yml file (alternative to repository input) | No       | `.github/repository-config.yml`                 |
+| `use-docker`        | Run the action inside the published container image                  | No       | `false`                                         |
+| `docker-image`      | Docker image reference (tag or digest) when `use-docker` is true     | No       | `ghcr.io/falkcorp/gha-get-frontend-config:main` |
 
 ## Outputs
 
