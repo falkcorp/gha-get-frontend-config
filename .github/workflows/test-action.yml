@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Run Get Frontend Config (file)
         id: frontend_file
-        uses: jdfalk/get-frontend-config-action@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: falkcorp/gha-get-frontend-config@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
         with:
           repository-config: |
             languages:
@@ -30,7 +30,7 @@ jobs:
                 frontend: "web"
       - name: Run Get Frontend Config (inline)
         id: frontend_inline
-        uses: jdfalk/get-frontend-config-action@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: falkcorp/gha-get-frontend-config@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
         with:
           repository-config: |
             languages:
