@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          submodules: recursive
       - name: Run Get Frontend Config (file)
         id: frontend_file
         uses: falkcorp/gha-get-frontend-config@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
