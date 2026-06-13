@@ -22,7 +22,7 @@ jobs:
           submodules: recursive
       - name: Run Get Frontend Config (file)
         id: frontend_file
-        uses: falkcorp/gha-get-frontend-config@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: falkcorp/gha-get-frontend-config@0366b94627b5ad045101694a00dd890ab9e1ff89 # main
         with:
           repository-config: |
             languages:
@@ -32,7 +32,7 @@ jobs:
                 frontend: "web"
       - name: Run Get Frontend Config (inline)
         id: frontend_inline
-        uses: falkcorp/gha-get-frontend-config@986f2c5531dbf9d7738306a2f2c29006a96ebde4 # main
+        uses: falkcorp/gha-get-frontend-config@0366b94627b5ad045101694a00dd890ab9e1ff89 # main
         with:
           repository-config: |
             languages:
